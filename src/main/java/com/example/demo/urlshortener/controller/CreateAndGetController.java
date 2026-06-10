@@ -4,11 +4,9 @@ import com.example.demo.urlshortener.dto.CursorPageResponse;
 import com.example.demo.urlshortener.dto.UrlRequestDto;
 import com.example.demo.urlshortener.dto.UrlResponseDto;
 import com.example.demo.urlshortener.service.UrlService;
-import com.example.demo.user.dto.UserDTO;
-import com.example.demo.user.model.ApiResponse;
+import com.example.demo.common.response.ApiResponse;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

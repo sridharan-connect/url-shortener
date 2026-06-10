@@ -1,16 +1,14 @@
 package com.example.demo.urlshortener.service;
 
 import com.example.demo.common.exception.AppException;
-import com.example.demo.urlshortener.dto.*;
+import com.example.demo.urlshortener.dto.CursorPageResponse;
+import com.example.demo.urlshortener.dto.UrlClickEvent;
+import com.example.demo.urlshortener.dto.UrlResponseDto;
+import com.example.demo.urlshortener.dto.UrlStatsResponse;
 import com.example.demo.urlshortener.entity.UrlMapping;
 import com.example.demo.urlshortener.repository.UrlRepository;
 import com.example.demo.urlshortener.util.Base62Util;
-import com.example.demo.user.dto.UserDTO;
-import com.example.demo.user.model.User;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -18,8 +16,9 @@ import org.springframework.stereotype.Service;
 import java.net.URI;
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 @Service
